@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses Website</title>
+
+<style>
+body { font-family: Arial; }
+
+nav a {
+  margin: 10px;
+  cursor: pointer;
+  color: blue;
+}
+
+.section {
+  display: none;
+  margin-top: 20px;
+}
+</style>
+
+<script>
+function showSection(id) {
+  let sections = document.querySelectorAll('.section');
+  sections.forEach(s => s.style.display = 'none');
+
+  document.getElementById(id).style.display = 'block';
+}
+
+window.onload = function () {
+  showSection('home');
+}
+</script>
+
+</head>
+<body>
+
+<header>
+  <h1>My Courses Website</h1>
+</header>
+
+<nav>
+  <a onclick="showSection('home')">Home</a>
+  <a onclick="showSection('courses')">My Courses</a>
+  <a onclick="showSection('add')">Add Course</a>
+  <a onclick="showSection('contact')">Contact Us</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <h2>Welcome</h2>
+  <p>This website helps you manage your courses easily.</p>
+</div>
+
+<!-- COURSES -->
+<div id="courses" class="section">
+  <h2>My Courses</h2>
+  <table border="1">
+    <tr>
+      <th>Course</th><th>Instructor</th><th>Credits</th>
+    </tr>
+    <tr><td>electronics</td><td>Ahmed</td><td>3</td></tr>
+    <tr><td>math</td><td>Sara</td><td>2</td></tr>
+    <tr><td>pl</td><td>Ali</td><td>3</td></tr>
+    <tr><td>it</td><td>Mona</td><td>4</td></tr>
+    <tr><td>statistics</td><td>Hassan</td><td>3</td></tr>
+  </table>
+</div>
+
+<!-- ADD COURSE -->
+<div id="add" class="section">
+  <h2>Add Course</h2>
+  <form>
+    <input placeholder="Course Name"><br><br>
+    <input placeholder="Instructor"><br><br>
+    <input type="number" placeholder="Credits"><br><br>
+    <textarea placeholder="Notes"></textarea><br><br>
+    <button>Add</button>
+  </form>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: sandyfarid@email.com</p>
+  <p>Phone: 0123456789</p>
+</div>
+
+<footer>
+  <p>© 2026 All rights reserved</p>
+</footer>
+
+</body>
+</html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #e6f2ff;
+        }
+
+        h1, h2, p {
+            color: blue;
+        }
+    </style>
+</head>
